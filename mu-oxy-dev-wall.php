@@ -24,10 +24,37 @@ function OxyDevWall( $plugins ) {
 
     require_once ABSPATH . 'wp-includes/pluggable.php';
 
-    // If user isn't logged in or is logged in but not an admin
-    if ( ! is_user_logged_in() || ! current_user_can( 'manage_options' ) ) {
+    /**
+     * Modify your privileges here
+     */
+    $privileges = array(
+        'manage_options'
+    );
+    /**
+     * Stop editing
+     */
 
-        // Check if Oxygen is activated by checking the plugins
+    // Set flag for privileged user
+    $user_is_privileged = false;
+
+    // If user is logged in..
+    if ( is_user_logged_in() ) {
+
+        // .. and adheres to one or ore special priviliges
+        foreach( $privileges as $privilege ) {
+            if ( current_user_can( $privilege ) ) {
+
+                // Set truthy flag
+                $user_is_privileged = true;
+                continue; // No need to keep checking
+            }
+        }
+    }
+
+    // If user isn't logged in or is logged in but not privileged
+    if ( ! $user_is_privileged ) {
+
+        // Check if Oxygen is activated by checking the plugins list
         $oxy_active = array_search( 'oxygen/functions.php', $plugins );
 
         // Oxygen is active. Unload it.
