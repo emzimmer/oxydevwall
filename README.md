@@ -25,6 +25,9 @@ This plugin has no settings or admin pages. If you need complex user privileging
 `    'manage_options'`
 `);`
 
+## No Warranty
+The plugin is provided on an as-is basis for free to the Oxygen community. It is up to you to test it and make sure it works as you expect for the purpose described here. In other words, test it first to make sure it works with your configuration.
+
 ## Changelog
 ### 1.0.0
 * Initial release
