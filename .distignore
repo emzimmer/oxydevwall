@@ -1,0 +1,13 @@
+/.wordpress-org
+/.git
+/.github
+/node_modules
+/resources
+.distignore
+.gitignore
+.npmrc
+composer.json
+composer.lock
+package.json
+pnpm-lock.yaml
+webpack.mix.js
