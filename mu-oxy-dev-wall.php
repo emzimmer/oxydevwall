@@ -46,7 +46,7 @@ function OxyDevWall( $plugins ) {
 
                 // Set truthy flag
                 $user_is_privileged = true;
-                continue; // No need to keep checking
+                break; // No need to keep checking
             }
         }
     }
