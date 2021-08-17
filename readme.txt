@@ -16,7 +16,7 @@ Forked from [emzimmer/oxydevwall](https://github.com/emzimmer/oxydevwall)
 
 == Description ==
 
-Load the Oxygen Builder plugin only for users with privilage access as defined on **Oxygen > Client Control** setting page.
+Load the Oxygen Builder plugin only for users with privilege access as defined on **Oxygen > Client Control** setting page.
 
 
 ### Further Reading
@@ -39,7 +39,7 @@ For more information, see [Releases](https://go.oxyrealm.com/changelog).
 
 Release Date:
 
-* Privilage access as defined on Oxygen > Client Control setting page
+* Privilege access as defined on Oxygen > Client Control setting page
 
 = 1.0.0 =
 
