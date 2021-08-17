@@ -22,25 +22,25 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'OXY_DEV_WALL_MU_FILENAME', 'mu-unload-oxygen-builder.php' );
+define( 'OXY_UNLOAD_OXYGEN_BUILDER_MU_FILENAME', 'mu-unload-oxygen-builder.php' );
 
 register_activation_hook( __FILE__, function() {
-	if ( ! file_exists( WPMU_PLUGIN_DIR ) || ! is_dir( WPMU_PLUGIN_DIR ) ) {
-        mkdir( WPMU_PLUGIN_DIR );
-    }
-
-    if ( file_exists( WPMU_PLUGIN_DIR . '/' . OXY_DEV_WALL_MU_FILENAME ) ) {
-        unlink( WPMU_PLUGIN_DIR . '/' . OXY_DEV_WALL_MU_FILENAME );
+    if ( file_exists( WPMU_PLUGIN_DIR . '/' . OXY_UNLOAD_OXYGEN_BUILDER_MU_FILENAME ) ) {
+        unlink( WPMU_PLUGIN_DIR . '/' . OXY_UNLOAD_OXYGEN_BUILDER_MU_FILENAME );
+    } else {
+        if ( ! file_exists( WPMU_PLUGIN_DIR ) || ! is_dir( WPMU_PLUGIN_DIR ) ) {
+            mkdir( WPMU_PLUGIN_DIR );
+        }
     }
 
     copy(
-        plugin_dir_path(__FILE__) . '/'. OXY_DEV_WALL_MU_FILENAME,
-        WPMU_PLUGIN_DIR . '/' . OXY_DEV_WALL_MU_FILENAME
+        plugin_dir_path(__FILE__) . '/'. OXY_UNLOAD_OXYGEN_BUILDER_MU_FILENAME,
+        WPMU_PLUGIN_DIR . '/' . OXY_UNLOAD_OXYGEN_BUILDER_MU_FILENAME
     );
 } );
 
 register_deactivation_hook( __FILE__, function() {
-	if ( file_exists( WPMU_PLUGIN_DIR . '/' . OXY_DEV_WALL_MU_FILENAME ) ) {
-        unlink( WPMU_PLUGIN_DIR . '/' . OXY_DEV_WALL_MU_FILENAME );
+	if ( file_exists( WPMU_PLUGIN_DIR . '/' . OXY_UNLOAD_OXYGEN_BUILDER_MU_FILENAME ) ) {
+        unlink( WPMU_PLUGIN_DIR . '/' . OXY_UNLOAD_OXYGEN_BUILDER_MU_FILENAME );
     }
 } );
