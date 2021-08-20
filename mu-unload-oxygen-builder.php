@@ -14,7 +14,7 @@
  * @package             Unload Oxygen Builder
  * @author              Max Zimmer, oxyrealm <hello@oxyrealm.com>
  * @copyright           2021 Max Zimmer
- * @version             1.1.17
+ * @version             1.1.0
  * @since               1.0.0
  */
 
